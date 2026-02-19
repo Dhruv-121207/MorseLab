@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morse Code Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Morse Code Converter</h1>
+
+        <form method="POST" autocomplete="off" novalidate>
+
+            <label for="text">Input</label>
+            <textarea class="fixed"  id="text" name="text" placeholder="Enter text or morse">{{ text }}</textarea>
+
+            <div class="buttons">
+                <button type="submit" name="action" value="encode">Convert to Morse</button>
+                <button type="submit" name="action" value="decode">Convert to Text</button>
+            </div>
+
+        </form>
+
+        {% if result is not none %}
+            <div class="result-box">
+                <label>Result</label>
+                <textarea class="fixed" readonly>{{ result }}</textarea>
+            </div>
+        {% endif %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <p class="flash-{{ category }}">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+
+    </div>
+</body>
+</html>
