@@ -45,7 +45,7 @@ morse-code-converter/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/morse-code-converter.git
+git clone https://github.com/Dhruv-121207/morse_code_converter.git
 cd morse-code-converter
 ```
 
