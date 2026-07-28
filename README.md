@@ -1,84 +1,117 @@
-# Morse Code Converter 🔠
+# MorseLab 📡
 
-A simple and clean **Morse Code Converter** built using **Python and Flask**.
-This web application allows users to encode plain text into Morse code and decode Morse code back into readable text through a user-friendly web interface.
-
----
-
-## 🚀 Features
-
-* Encode text to Morse code
-* Decode Morse code to plain text
-* Flash messages for invalid characters
-* Session handling to preserve form data
-* Clean and structured Flask project layout
+MorseLab is a Flask-based web application that allows users to **encode plain text into Morse code** and **decode Morse code back into readable text** through a clean and responsive web interface.
 
 ---
 
-## 🛠️ Tech Stack
+# 🌐 Live Demo
 
-* Python 3.11
-* Flask 3.1.2
-* HTML5
-* CSS3
+**Try the application here:**
 
----
+https://morselab.onrender.com
 
-## 📁 Project Structure
-
-```
-morse-code-converter/
-│
-├── app.py
-├── config.py
-├── requirements.txt
-├── templates/
-│   └── index.html
-├── static/
-│   └── main.css
-```
+> **Note:** The application is hosted on Render's free tier, so the first request may take a few seconds if the server is waking up.
 
 ---
 
-## ⚙️ Installation & Setup
+# 📸 Preview
 
-### 1️⃣ Clone the repository
+![MorseLab Preview](screenshots/MorseLab-home.jpeg)
+
+---
+
+# 🚀 Features
+
+- Encode plain text into Morse code
+- Decode Morse code back into readable text
+- Support for:
+  - Letters (A–Z)
+  - Numbers (0–9)
+  - Common punctuation symbols
+- Flash messages for invalid characters or unsupported input
+- Session handling to preserve form data after conversion
+- Simple and responsive user interface
+
+---
+
+# ⚙️ Technologies Used
+
+- Python 3
+- Flask
+- HTML5
+- CSS3
+
+---
+
+# 📥 Installation & Setup
+
+## Clone the Repository
 
 ```bash
 git clone https://github.com/Dhruv-121207/morse_code_converter.git
-cd morse-code-converter
+cd morse_code_converter
 ```
 
-### 2️⃣ Create and activate a virtual environment (recommended)
+## Create & Activate a Virtual Environment
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Mac/Linux
-.venv\\Scripts\\activate      # Windows
 ```
 
-### 3️⃣ Install dependencies
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### macOS / Linux
+
+```bash
+source .venv/bin/activate
+```
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run the application
+## Run the Application
 
 ```bash
 python app.py
 ```
 
-Then open your browser and visit:
+Open:
 
 ```
-http://127.0.0.1:5000
+http://127.0.0.1:5000/
 ```
 
 ---
 
-## 🔐 License
+# 📌 Notes
+
+- Morse code conversions are implemented using Python dictionaries for efficient lookups.
+- Flask sessions are used to preserve input and output across redirects.
+- Unsupported characters are detected and displayed through flash messages.
+- The application follows Flask's POST/Redirect/GET pattern to avoid duplicate form submissions.
+
+---
+
+# 🚀 Future Improvements
+
+Potential enhancements include:
+
+- Copy result to clipboard
+- Clear input/output button
+- Audio playback of Morse code
+- Download converted text as a `.txt` file
+- Dark/Light theme toggle
+- Support for additional international Morse code characters
+
+---
+
+# 📜 License
 
 This project is licensed under the **MIT License**.
-
-You are free to use, modify, and distribute this software in accordance with the license terms.
