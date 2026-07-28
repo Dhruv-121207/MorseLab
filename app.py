@@ -2,6 +2,7 @@ from flask import Flask,redirect,render_template,flash,request,url_for,session
 from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 
 morse_code_mapping = {"A":".-",
                      "B":"-...",
@@ -106,7 +107,7 @@ def home():
             if error:
                 flash(error,"warning")
         else:
-            return None,None
+            return redirect(url_for("home"))
 
         session['text'] = text
         session['result'] = result
