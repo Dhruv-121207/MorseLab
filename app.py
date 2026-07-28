@@ -87,7 +87,6 @@ def decode_morse(text):
     return result,None
 
 @app.route("/",methods=["POST","GET"])
-@app.route("/home",methods=["POST","GET"])
 def home():
 
     text = ""
